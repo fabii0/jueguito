@@ -1,1 +1,13 @@
 # jueguito
+import random
+
+def lanzar_dados():
+    return random.randint(1, 6), random.randint(1, 6)
+
+
+D_joueur = lanzar_dados()
+D_ordi = lanzar_dados()
+
+print(D_joueur)
+print(D_ordi)
+
