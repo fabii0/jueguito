@@ -1,18 +1,19 @@
 # jueguito
+# jueguito
 # importar librería random para números al azar
 import random
 
-def lanzar():
+def lancer():
     # la función randint selecciona un numero al azar que este entre a y b
     # su formato es randint(a, b)
-    PrimerNumero = random.randint(1,6) 
-    SegundoNumero = random.randint(1,6)
-    return PrimerNumero, SegundoNumero
+    n1 = random.randint(1,6) 
+    n2 = random.randint(1,6)
+    return n1, n2
 
 jeu_continu = True
 while (jeu_continu): # ciclo infinito para preguntar
-    d1 =lanzar()
-    d2 =lanzar()
+    d1 =lancer()
+    d2 =lancer()
     print(d1, d2)
-    Respuesta = input("¿Quiere lanzar otra vez? (si/no): ")
-    jeu_continu = Respuesta.lower() == "si"
+    Repond = input("¿Voulez-vous lancer à nouveau? (oui/non): ")
+    jeu_continu = Repond.lower() == "oui"
