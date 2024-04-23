@@ -1,19 +1,23 @@
-# jueguito
 
-# importar librería random para números al azar
+#Importamos la libreria random
 import random
-
-def lancer():
-    # la función randint selecciona un numero al azar que este entre a y b
-    # su formato es randint(a, b)
-    n1 = random.randint(1,6) 
-    n2 = random.randint(1,6)
-    return n1, n2
-
-jeu_continu = True
-while (jeu_continu): # ciclo infinito para preguntar
-    d1 =lancer()
-    d2 =lancer()
-    print(d1, d2)
-    Repond = input("¿Voulez-vous lancer à nouveau? (oui/non): ")
-    jeu_continu = Repond.lower() == "oui"
+print("** JUE DE HASARD AVEC DES DÉ**")
+#Creamos una varable llamada dinero
+argent = 0
+#Le pedimos al usuario la entrada de un entero que en este caso sera el numero de intents
+essais = int(input("Combien d'essais:  "))
+#Creamos un bucle for 
+for i in range(essais):
+    #Creamos nuestro dado
+    de = random.randint(1,6)
+    #Si el dado es igual a 6, ganaras $4
+    if de== 6:
+        argent=argent+4
+        print("Dé = 6, gagné $4")
+    #Si el dado es igual a 3, ganaras $1
+    elif de==3:
+        argent=argent+1
+        print("Dé = 3, gagné $1")
+    #Si el dado es igual a 1, no ganaras ni perderas dinero.
+    elif de==1:
+        print("continuer à participer")
